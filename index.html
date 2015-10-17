@@ -19,11 +19,43 @@
 </head>
 
 <body>
+  <!-- Login Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+
+      <div class="modal-body">
+        <form class="form">
+        <div class="form-group">
+          <input type="text" class="form-control" id="    " placeholder = "Username">
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" id="    " placeholder = "Password">
+        </div>
+        <div class="form-group">
+          <a class="btn btn-primary btn-greydark btn-block" href="#">Login</a>
+        </div>
+      </div>
+    
+      <div class="modal-footer">
+        <p>New to CoFare ?</p>
+        <a class="btn" role="button" href = "register_cofare.html">Sign Up for CoFarer</a> or 
+        <a class="btn" role="button" href = "register_retail.html">Sign Up for Retailer</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Login Modal Ends-->
+
   <div class="page-wrapper">
 
     <header>
       <div class="one">
-        <div class="header-one"><span>Log in </span></div>
+        <div class="header-one"><span><a class="btn" role="button"data-toggle="modal" data-target="#myModal">Log in </a></span></div>
       </div>
       <div class="two">
         <div class="header-two">
@@ -162,8 +194,8 @@
       </div>
       <div class="row">
         <div class="button-wrapper">
-          <a class="btn btn-primary btn-blue btn-cofare" href="#">Sign Up for Cofarer</a>
-          <a class="btn btn-primary btn-orange btn-cofare" href="#">Sign Up for Retailer</a>
+          <a class="btn btn-primary btn-blue btn-cofare" href="register_cofare.html">Sign Up for Cofarer</a>
+          <a class="btn btn-primary btn-orange btn-cofare" href="register_retail.html">Sign Up for Retailer</a>
         </div>
       </div>
     </div>
@@ -188,6 +220,7 @@
   <script type="text/javascript">
     $(document).ready(function(){
         $('.carousel').carousel();
+        $('#myModal').modal('hide');
     });
   </script>
 </body>

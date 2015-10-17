@@ -229,6 +229,12 @@ footer{
 	@include make-xs-column(9);
 
 }
-
+//modal
+.modal-content,.modal-body,.modal-footer{
+	text-align:center;
+	input{
+		width:100%;
+	}
+}
 
 

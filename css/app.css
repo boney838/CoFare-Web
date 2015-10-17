@@ -8552,3 +8552,11 @@ footer .footer-wrapper ul li {
   padding-left: 15px;
   padding-right: 15px;
 }
+
+.modal-content, .modal-body, .modal-footer {
+  text-align: center;
+}
+
+.modal-content input, .modal-body input, .modal-footer input {
+  width: 100%;
+}
