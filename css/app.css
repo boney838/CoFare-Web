@@ -8519,21 +8519,6 @@ footer .footer-wrapper ul li {
   }
 }
 
-.grid-item {
-  float: left;
-  width: 80px;
-  height: 60px;
-  border: 2px solid rgba(0, 0, 0, 0.5);
-}
-
-.grid-item--width2 {
-  width: 160px;
-}
-
-.grid-item--height2 {
-  height: 140px;
-}
-
 .sidebar-left {
   position: relative;
   float: left;
@@ -8551,6 +8536,50 @@ footer .footer-wrapper ul li {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.sidebar-right p span.leftie {
+  font-weight: strong;
+}
+
+.show-video {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .show-video {
+    float: left;
+    width: 50%;
+  }
+}
+
+.show-photos {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  min-height: 1px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media (min-width: 992px) {
+  .show-photos {
+    float: left;
+    width: 50%;
+  }
 }
 
 .modal-content, .modal-body, .modal-footer {
