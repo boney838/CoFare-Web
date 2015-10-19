@@ -13,6 +13,10 @@ $padding-cf : 15%;
 .btn-greydark{
 	@include button-variant(#fff,#505455,#505455);	
 }
+.btn-green{
+	@include button-variant(#fff,#74be4d,#74be4d);
+}
+
 .btn-cofare {
 	@include button-size($padding-large-vertical, 80px ,$font-size-small,$line-height-small,$border-radius-small);
 	margin-right:20px;
@@ -218,24 +222,33 @@ footer{
 }
 .sidebar-right{
 	@include make-xs-column(9);
-	p{
-		span.leftie{
-			font-weight: strong;
-			@extend pull-left;
+			p.double{
+			display: inline-block;
+			width:100%;
+			margin-bottom: 4px;
+			span.leftie{
+				@extend .pull-left;
+			}
+			span.rightie{
+				@extend .pull-right;
+				padding-left:15px;
+			}
 		}
-		span.rightie{
-			@extend pull-right;
-		}
+	.show-video{
+	@include make-md-column(6);
+	@include make-xs-column(12);
+	margin-bottom:1.5em;
+
 	}
+	.show-photos{
+	 @extend .show-video;
+	}	
 }
 //Show_detail_customer
-.show-video{
-	@include make-xs-column(12);
-	@include make-md-column(6);
-}
-.show-photos{
-	@include make-xs-column(12);
-	@include make-md-column(6);
+.choose_date{
+	h5{
+		font-size:$font-size-h4;
+	}
 }
 
 //modal
