@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "bootstrap-social";
 
 //variables
 $padding-cf : 15%;
@@ -203,13 +204,22 @@ footer{
 }
 @media(min-width:768px){
 	$padding-cf : 15%;
-	.form-group input{
-		width:50%;
+
+/////////forms
+	
+	.form-group input {
+		//width:50%;	
 	}
 	.form-inline .form-group {
 		margin-bottom: $form-group-margin-bottom;
 		label{
 		display: block;
+		}
+	}
+	.half-form-group {
+		width:49%;
+		 input.half-form-control{
+			width:100%;
 		}
 	}
 	.special-col{
@@ -270,5 +280,10 @@ footer{
 		width:100%;
 	}
 }
-
-
+//stars -rating system
+#hearts { color: #ee8b2d;}
+#hearts-existing { color: #ee8b2d;}
+.rating{
+	display:inline-block;
+	padding:0 10px;
+}

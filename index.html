@@ -10,6 +10,7 @@
 
   <!-- Bootstrap -->
   <link href="css/app.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -20,36 +21,36 @@
 
 <body>
   <!-- Login Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="myModalLabel">Login</h4>
-      </div>
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Login</h4>
+        </div>
 
-      <div class="modal-body">
-        <form class="form">
-        <div class="form-group">
-          <input type="text" class="form-control" id="    " placeholder = "Username">
+        <div class="modal-body">
+          <form class="form">
+            <div class="form-group">
+              <input type="text" class="form-control" id="    " placeholder="Username">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="    " placeholder="Password">
+            </div>
+            <div class="form-group">
+              <a class="btn btn-primary btn-greydark btn-block" href="#">Login</a>
+            </div>
         </div>
-        <div class="form-group">
-          <input type="text" class="form-control" id="    " placeholder = "Password">
+
+        <div class="modal-footer">
+          <p>New to CoFare ?</p>
+          <a class="btn" role="button" href="register_cofare.html">Sign Up for CoFarer</a> or
+          <a class="btn" role="button" href="register_retail.html">Sign Up for Retailer</a>
         </div>
-        <div class="form-group">
-          <a class="btn btn-primary btn-greydark btn-block" href="#">Login</a>
-        </div>
-      </div>
-    
-      <div class="modal-footer">
-        <p>New to CoFare ?</p>
-        <a class="btn" role="button" href = "register_cofare.html">Sign Up for CoFarer</a> or 
-        <a class="btn" role="button" href = "register_retail.html">Sign Up for Retailer</a>
       </div>
     </div>
   </div>
-</div>
-<!-- Login Modal Ends-->
+  <!-- Login Modal Ends-->
 
   <div class="page-wrapper">
 
@@ -59,7 +60,9 @@
       </div>
       <div class="two">
         <div class="header-two">
-          <div class="logo"><a href = "index.html"><img src="assets/images/logo.png" class="img-responsive"></a></div>
+          <div class="logo">
+            <a href="index.html"><img src="assets/images/logo.png" class="img-responsive"></a>
+          </div>
           <div class="search">
 
             <div class="input-group">
@@ -204,10 +207,17 @@
   <footer>
     <div class="footer-wrapper">
       <span>Copyright 2015. Cofare </span>
+      <span class="pull-right">
+          <span ><a class="btn btn-social-icon btn-facebook"><i class="fa fa-facebook"></i></a></span>
+          <span><a class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></span>    
+          <span ><a class="btn btn-social-icon btn-instagram"><i class="fa fa-instagram"></i> </a></span>
+          <span><a class="btn btn-social-icon btn-pinterest"><i class="fa fa-pinterest"></i> </a></span>
+          <span><a class="btn btn-social-icon btn-google"><i class="fa fa-google"></i> </a></span>
+      </span>
       <ul>
         <li>Home</li>
         <li>FAQ</li>
-        <li><a href ="About_us.html">About Us</a></li>
+        <li><a href="About_us.html">About Us</a></li>
         <li>Privacy</li>
       </ul>
     </div>
