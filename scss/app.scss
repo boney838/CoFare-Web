@@ -65,13 +65,15 @@ header{
 		background-color:$gray;
 		.header-one{
 			padding:0 $padding-cf;
-							
-		span{
-			@extend .pull-right;
-			padding:1em 0;
-			font-size: .75em;
-			margin-right: 15px;
-			
+			.welcome{
+				 color:#fff;
+				 font-weight: normal;
+			}					
+			span{
+				@extend .pull-right;
+				padding:1em 0;
+				font-size: .75em;
+				margin-right: 15px;
 			}
 		}
 	}

@@ -8311,6 +8311,11 @@ header .one .header-one, footer .one .header-one {
   padding: 0 15%;
 }
 
+header .one .header-one .welcome, footer .one .header-one .welcome {
+  color: #fff;
+  font-weight: normal;
+}
+
 header .one .header-one span, footer .one .header-one span {
   padding: 1em 0;
   font-size: .75em;
