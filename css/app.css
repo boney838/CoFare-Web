@@ -8248,6 +8248,10 @@ fieldset[disabled] .btn-green.active {
   background-color: #74be4d;
 }
 
+.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+  border: none;
+}
+
 .panel-cofare {
   border-color: #eeeeef;
 }
@@ -8396,6 +8400,10 @@ footer .footer-wrapper ul {
   list-style: none;
   margin: 0;
   padding: 3em 0 5em 0;
+}
+
+footer .footer-wrapper ul a {
+  color: #fff;
 }
 
 footer .footer-wrapper ul li {
@@ -8556,6 +8564,10 @@ footer .footer-wrapper ul li {
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 1em;
+}
+
+.sidebar-left p.show-code {
+  padding-top: 5px;
 }
 
 .sidebar-right {

@@ -34,6 +34,9 @@ $padding-cf : 15%;
 }
 
 // other components
+.borderless tbody tr td, .borderless tbody tr th, .borderless thead tr th {
+    border: none;
+}
 .panel-cofare {
   @include panel-variant(#eeeeef, $panel-default-text, #eeeeef, #eeeeef);
 }
@@ -116,9 +119,13 @@ footer{
 			list-style: none;
 			margin:0;
 			padding:3em 0 5em 0;
+			a{
+				color:#fff;
+			}
 			li{
 				display:inline;
 				padding-right: 2em;
+
 			}
 		}
 	}
@@ -221,6 +228,9 @@ footer{
 .sidebar-left{
 	@include make-xs-column(3);
 	padding-top:1em;
+	p.show-code{
+		padding-top:5px;
+	}
 }
 .sidebar-right{
 	@include make-xs-column(9);
