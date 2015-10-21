@@ -9227,6 +9227,9 @@ footer .footer-wrapper ul li {
 }
 
 @media (min-width: 768px) {
+  .form-group input {
+    width: 50%;
+  }
   .form-inline .form-group {
     margin-bottom: 15px;
   }
