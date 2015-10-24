@@ -11,6 +11,9 @@
   <!-- Bootstrap -->
   <link href="css/app.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href ="css/formValidation.min.css" rel ="stylesheet">
+  <link href ="css/classic.css" rel ="stylesheet">
+  <link href ="css/classic.date.css" rel ="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -82,256 +85,132 @@
       <div class="reg">
         <form></form>
 
-      <form class ="form-inline">
-        <div class="form-group half-form-group">
-          <label for="    ">CoFARE Product Code</label>
-          <input type="text" class="form-control half-form-control" id="    ">
-        </div>
-        <div class="form-group half-form-group">
-          <label for="    ">Retailer Product Code</label>
-          <input type="text" class="form-control half-form-control" id="    ">
-        </div>
-      </form>
+      <form id="retailSubmitShow" class ="form">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <span >CoFARE Product Code</span>
+            <label>123456</label>
+            <br>
 
-      <form class ="form-inline">
-        <div class="form-group half-form-group">
-          <label for="    ">Product Name</label>
-          <input type="text" class="form-control half-form-control" id="    ">
+          </div>
+          <div class="col-md-6 form-group">
+            <span>Retailer Product Code</span>
+            <label>123456</label>
+            <br>
+
+          </div>
         </div>
-        <div class="form-group ">
-          <label for="    ">Price</label>
-          <input type="text" class="form-control " id="    ">
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label for="    ">Product Name</label>
+            <input class="form-control" type="text" name="product" id="    ">
+          </div>
+          <div class="col-md-3 form-group">
+            <label for="    ">Price</label>
+            <input class="form-control" type="number" name="price" id="    ">
+          </div>
+          <div class="col-md-3 form-group">
+            <label for="    ">Quantity for sale</label>
+            <select class="form-control"  id="" name="quantity">
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+          </div>
         </div>
-          <div class="form-group">
-            <!-- Split button -->
-            <label for="  ">Quantity for sale</label>
-            <div class="btn-group">
-              <button type="button" class="btn btn-default">01</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">01</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
+        <div class ="row">
+          <div class="col-md-12 form-group">
+            <label for="    ">Product Description</label>
+            <textarea class="form-control" name="desc" id="    "></textarea>
+          </div>
+        </div>
+        <div class ="row">
+          <div class="col-md-6 form-group ">
+            <label for="    ">Date Product is Available for Purchase From</label>
+            <div style="position:relative;"><input class ="from_date form-control" type="date" id="input_from" name ="start_date"></div>
+          </div>
+          <div class="col-md-6 form-group to_date">
+            <label for="    ">Date Product is Available for Purchase To</label>
+            <div style="position:relative;"><input class ="to_date form-control" type="date" id="input_to" name ="end_date"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 form-group">
+            <label for="    ">Product Category</label>
+            <select class="form-control"  id="" name="category">
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+          </div>
+          <div class="col-md-4 form-group">
+            <label for="    ">Keywords</label>
+            <input class="form-control" type="text" name="keywords" id="    ">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-6 form-group">
+            <label for="    ">Upload Photos</label>
+             <div class="input-group">                
+                <input type="text" class="form-control" readonly>
+                <span class="input-group-btn">
+                    <span class="btn btn-primary btn-orange btn-file">
+                        Browse&hellip; <input type="file" name="photos" id=""  multiple>
+                    </span>
+                </span>
             </div>
           </div>
-      </form>
-      <form>
-        <div class ="form-group">
-          <label for="    ">Product Description</label>
-          <textarea class="form-control" id="    "></textarea>
-        </div>
-      </form>
-
-        <form class="form-inline" style="width:49%;display:inline-block;">
-          <h5> <strong>Date Product is Available for Purchase From</strong></h5>
-          <div class="form-group">
-            <!-- Split button -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-default" >January</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">January</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
+          <div class="col-md-6 form-group">
+            <label for="    ">Upload Videos</label>
+             <div class="input-group">     
+                <input type="text" class="form-control"  readonly>
+                <span class="input-group-btn">
+                    <span class="btn btn-primary btn-orange btn-file">
+                        Browse&hellip; <input type="file" name="videos" id="" multiple>
+                    </span>
+                </span>
             </div>
           </div>
-          <div class="form-group">
-            <!-- Split button -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-default" >01</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">01</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
+        </div>
+        <div class ="row">
+          <div class="col-md-12 form-group">
+            <label for="    ">Theater (Product) Reviews</label>
+            <div class="rating">
+              <div id="hearts" class="starrr"></div>
             </div>
+            <textarea class="form-control" name="Theatre" id="    "></textarea>
           </div>
-          <div class="form-group">
-            <!-- Split button -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-default" >2015</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">2015</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
-          </div>                      
-        </form>  
+        </div>
+        <hr>
 
-        <form class = "form-inline" style="width:49%; display:inline-block;">
-          <h5> <strong>Date Product is Available for Purchase To</strong></h5>
-          <div class="form-group">
-            <!-- Split button -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-default" >January</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">January</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
+        <div class ="row">         
+            <div class="col-md-12 form-group"><label>Fixed CoFare referrral commission fee per itrm sold, or CoFARE referral commission fee per item sol</label></div>
+            <div class="col-md-4 form-group">
+              <input type="text" class="form-control" name="commission1" id="" >
             </div>
+            <div class="col-md-1"><span style ="color:#BCBCBC;padding:8px ;">OR</span></div>
+            <div class="col-md-4 form-group">
+              <div class="input-group">
+              <input type="text" class="form-control" name="commission2" id="" />
+              <span class="input-group-addon" style = "color:#fff;font-weight:bold;">%</span>
+            </div>
+            </div>        
+        </div>
+        <div class ="row">
+          <div class="col-md-4 form-group">
+            <label for="    ">Days after sale when commisision is due</label>
+            <select class="form-control"  id="" name="days">
+                <option value="">Select</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
           </div>
-          <div class="form-group">
-            <!-- Split button -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-default" >01</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">01</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="form-group">
-            <!-- Split button -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-default" >2015</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">2015</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
-          </div>                      
-        </form>
-
-      <form class="form-inline">
-        <div class="form-group">
-          <label for="    ">Product Category</label>
-                      <div class="btn-group" >
-              <button type="button" class="btn btn-default" style="min-width:150px;"> Category</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">category</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
         </div>
-        <div class="form-group">
-          <label for="    ">Keyword Tags</label>
-          <input type="text" class="form-control" id="    ">
-        </div>
-      </form>
-      <hr>
-        <form class="form-inline">
-          <div class="form-group">
-            <!-- Split button -->
-            <label for="  ">Photos</label>
-            <div class="btn-group">
-              <button type="button" class="btn btn-default" style="min-width:150px;">Select</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Jan</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="form-group">
-            <!-- Split button -->
-            <label for="  ">Videos</label>
-            <div class="btn-group">
-              <button type="button" class="btn btn-default" style="min-width:150px;">Select</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">Jan</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
-          </div>                    
-        </form>
-    
-      <form>
-        <div class ="form-group">
-          <label for="    ">Theater (Product) Reviews</label>
-
-        <div class="rating">
-          <div id="hearts" class="starrr"></div>
-        </div>
-
-
-          <textarea class="form-control" id="    "></textarea>
-        </div>
-      </form>
-      <hr>
-      <form class= "form-inline">
-        <h5> <strong>Fixed CoFare referrral commission fee per itrm sold, or CoFARE referral commission fee per item sold </strong></h5>
-        <div class="form-group">
-          <input type="text" class="form-control" id="    ">
-        </div> <span style ="color:#BCBCBC;padding:6px ;">or</span>
-        <div class="form-group input-group">
-          <input type="text" class="form-control" id="    "><span class="input-group-addon" style = "color:#fff;font-weight:bold;">%</span>
-        </div>
-      </form>
-      <form class="form-inline">
-        <div class="form-group">
-          <label for="  ">Days after sale when commisision is due</label>
-          <!-- Split button -->
-            <div class="btn-group">
-              <button type="button" class="btn btn-default">01</button>
-              <button type="button" class="btn btn-orange dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <span class="caret"></span>
-                <span class="sr-only">Toggle Dropdown</span>
-              </button>
-              <ul class="dropdown-menu">
-                <li><a href="#">01</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-              </ul>
-            </div>
-        </div>
-      </form>
+      <br>
       <label>Retailer's terms and conditions</label>
       <div class="panel panel-cofare">
         <div class="panel-body">
@@ -343,15 +222,17 @@
 
         </div>
       </div>
-      <form>
-        <div class="checkbox">
+
+      <div class ="row">
+        <div class="checkbox col-md-3 form-group">
           <label>
-            <input type="checkbox"> Agree
+            <input type="checkbox" name="retailer_terms" id =""> Agree
           </label>
         </div>
-      </form>
+      </div>
+     
 
-            <label>Retailer's return policy</label>
+      <label>Retailer's return policy</label>
       <div class="panel panel-cofare">
         <div class="panel-body">
           <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
@@ -362,15 +243,17 @@
 
         </div>
       </div>
-      <form>
-        <div class="checkbox">
+
+      <div class ="row">
+        <div class="checkbox col-md-3 form-group">
           <label>
-            <input type="checkbox"> Agree
+            <input type="checkbox" name="return_terms" id =""> Agree
           </label>
         </div>
-      </form>
+      </div>
 
-      <a class="btn btn-primary btn-orange btn-cofare" href="#">Submit</a>
+      <button type="submit" class="btn btn-primary btn-orange btn-cofare" href="#">Submit</button>
+    </form>
     </div>
     </div>
   </div>
@@ -398,15 +281,212 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="assets/javascripts/bootstrap.min.js"></script>
-  <script src="assets/javascripts/extras.js"></script>
+  <script src="assets/javascripts/vendor/extras.js"></script>
+  <!-- form-validation -->
+  <script type="text/javascript" src="assets/javascripts/vendor/formValidation.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/vendor/bootstrap.min.js"></script>
+  <!-- DatePicker --> 
+  <script type="text/javascript" src="assets/javascripts/vendor/picker.js"></script>
+  <script type="text/javascript" src="assets/javascripts/vendor/picker.date.js"></script>
   <script type="text/javascript">
-    $(document).ready(function(){
-        $('.carousel').carousel();
-        $('#myModal').modal('hide');
-      $('#hearts').on('starrr:change', function(e, value){
-       $('#count').html(value);
-       });
-    });
+      $(document).ready(function() {
+  $('.carousel').carousel();
+  $('#myModal').modal('hide');
+
+//////////////rating///////////////////////////////////////////////////
+  $('#hearts').on('starrr:change', function(e, value) {
+    $('#count').html(value);
+  });
+
+///////////datepicker/////////////////////////////////////////////////
+  $('.from_date').pickadate({
+    selectYears: 10,
+    format: 'mm/dd/yyyy',
+    formatSubmit: 'mm/dd/yyyy',
+    hiddenName: true,
+  });
+  $('.to_date').pickadate({
+    selectYears: 10,
+    format: 'mm/dd/yyyy',
+    formatSubmit: 'mm/dd/yyyy',
+    hiddenName: true,
+  });
+
+  var from_$input = $('#input_from').pickadate(),
+    from_picker = from_$input.pickadate('picker')
+
+  var to_$input = $('#input_to').pickadate(),
+    to_picker = to_$input.pickadate('picker')
+
+  // Check if there’s a “from” or “to” date to start with.
+  if (from_picker.get('value')) {
+    to_picker.set('min', from_picker.get('select'))
+  }
+  if (to_picker.get('value')) {
+    from_picker.set('max', to_picker.get('select'))
+  }
+
+  // When something is selected, update the “from” and “to” limits.
+  from_picker.on('set', function(event) {
+    if (event.select) {
+      to_picker.set('min', from_picker.get('select'))
+    } else if ('clear' in event) {
+      to_picker.set('min', false)
+    }
+  })
+  to_picker.on('set', function(event) {
+    if (event.select) {
+      from_picker.set('max', to_picker.get('select'))
+    } else if ('clear' in event) {
+      from_picker.set('max', false)
+    }
+  })
+
+/////////////form validation///////////////////////////////////////// 
+  $('#retailSubmitShow').formValidation({
+    framework: 'bootstrap',
+    //        icon: {
+    //            valid: 'glyphicon glyphicon-ok',
+    //            invalid: 'glyphicon glyphicon-remove',
+    //            validating: 'glyphicon glyphicon-refresh'
+    //        },
+    fields: {
+      product: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+        }
+      },
+      price: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+          numeric: {
+            message: 'The price must be a number'
+          }
+        }
+      },
+      quantity: {
+        validators: {
+          notEmpty: {
+            message: 'Please select a quantity'
+          },
+        }
+      },
+      desc: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+        }
+      },
+      start_date: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+          date: {
+            format: 'MM/DD/YYYY',
+            message: 'The date is not valid'
+          }
+        }
+      },
+      end_date: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+          date: {
+            format: 'MM/DD/YYYY',
+            message: 'This date  is not valid'
+          }
+        }
+      },
+      category: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+        }
+      },
+      keywords: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+        }
+      },
+      photos: {
+        validators: {
+          file: {
+            extension: 'jpeg,png',
+            type: 'image/jpeg,image/png',
+            message: 'The selected file is not valid'
+          }
+        }
+      },
+      videos: {
+        validators: {
+          file: {
+            extension: 'mpeg mpg,wmv',
+            type: 'video/mpeg,ivideo/x-ms-wmv',
+            message: 'The selected file is not valid'
+          }
+        }
+      },
+      Theatre: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+        }
+      },
+      commission1: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+          numeric: {
+            message: 'commission must be a number'
+          }
+        }
+      },
+      commission2: {
+        validators: {
+          notEmpty: {
+            message: 'Required'
+          },
+          numeric: {
+            message: 'commission must be a number'
+          }
+        }
+      },
+      retailer_terms: {
+        validators: {
+          notEmpty: {
+            message: 'Please check Agree'
+          }
+        }
+      },
+      return_terms: {
+        validators: {
+          notEmpty: {
+            message: 'Please check Agree'
+          }
+        }
+      },
+      days: {
+        validators: {
+          notEmpty: {
+            message: 'Please select days'
+          }
+        }
+      },
+    }
+  });
+});
   </script>
 </body>
 
