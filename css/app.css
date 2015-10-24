@@ -4651,8 +4651,8 @@ tbody.collapse.in {
   line-height: 1;
   color: #515353;
   text-align: center;
-  background-color: #f18030;
-  border: 1px solid #f18030;
+  background-color: white;
+  border: 1px solid #ccc;
   border-radius: 4px;
 }
 

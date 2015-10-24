@@ -9,8 +9,11 @@
   <title>CoFAre - The Lion King...</title>
 
   <!-- Bootstrap -->
-  <link href="css/app.css" rel="stylesheet">
+ <link href="css/app.css" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href ="css/formValidation.min.css" rel ="stylesheet">
+  <link href ="css/classic.css" rel ="stylesheet">
+  <link href ="css/classic.date.css" rel ="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -115,40 +118,18 @@
       <div class="choose_date">
         <h5>When do you want to see the show</h5>
         <h4>October 15,2015 - October 25,2016</h4>
-        <form class = "form-inline hidden" >
-        </form>
-        <form class="form-inline">
-  <div class="form-group">
-    <select class = "form-control">
-              <option>October</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
+        <form></form>
+        <form class="form" id="chooseDate">
+          <div class ="row">
+            <div class="col-md-4 form-group">   
+              <div style="position:relative;">
+                <div class="input-group"><input class ="form-control date" type="text" id="" name ="date" placeholder="MM/DD/YYYY"><span class="input-group-addon glyphicon glyphicon-calendar"></span></div>
+              </div>
+            </div>
           </div>
-          <div class = "form-group">
-            <select class = "form-control">
-              <option>18</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-  </div>
-  <div class = "form-group">
-            <select class = "form-control">
-              <option>2015</option>
-              <option>2</option>
-              <option>3</option>
-              <option>4</option>
-              <option>5</option>
-            </select>
-  </div>
-  
-</form>
-        <hr>
-        <a class="btn btn-primary btn-green btn-cofare" href="show_payment.html">Next</a>
+          <hr>
+        <button type="submit" class="btn btn-primary btn-green btn-cofare" href="show_payment.html">Next</button>
+        </form>
       </div>
     </div>
   </div>
@@ -173,10 +154,55 @@
     </div>
   </footer>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="assets/javascripts/bootstrap.min.js"></script>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="assets/javascripts/bootstrap.min.js"></script>
+  <!-- form-validation -->
+  <script type="text/javascript" src="assets/javascripts/vendor/formValidation.min.js"></script>
+  <script type="text/javascript" src="assets/javascripts/vendor/bootstrap.min.js"></script>
+  <!-- DatePicker --> 
+  <script type="text/javascript" src="assets/javascripts/vendor/picker.js"></script>
+  <script type="text/javascript" src="assets/javascripts/vendor/picker.date.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+            $('.date').pickadate({
+              format: 'mm/dd/yyyy',
+              formatSubmit: 'mm/dd/yyyy',
+              hiddenName: true,
+              min: true
+               });
+            $('.date').pickadate('picker').on('render', function() {
+            // http://amsul.ca/pickadate.js/api.htm#events-callbacks
+            // Revalidate the date of birth field
+                $('#chooseDate').formValidation('revalidateField', 'date');
+              });
+
+
+////////////////////////////form validation//////////////////////////////////////////////////////  
+            $('#chooseDate').formValidation({
+        framework: 'bootstrap',
+//        icon: {
+//            valid: 'glyphicon glyphicon-ok',
+//            invalid: 'glyphicon glyphicon-remove',
+//            validating: 'glyphicon glyphicon-refresh'
+//        },
+        fields: {
+            date: {
+                validators: {
+                    notEmpty: {
+                        message: 'Please choose a date'
+                    },
+                      date: {
+                      format: 'MM/DD/YYYY',
+                      message: 'The date of birth is not valid'
+                    }
+                }
+            },          
+        }
+        });
+  });
+  </script>
 </body>
 
 </html>
