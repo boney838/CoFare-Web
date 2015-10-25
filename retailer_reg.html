@@ -21,7 +21,7 @@
 </head>
 
 <body>
-  <!-- Login Modal -->
+<!-- Login Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -31,7 +31,7 @@
       </div>
 
       <div class="modal-body">
-        <form class="form">
+        <form class="form" id="loginBox">
         <div class="form-group">
           <input type="text" class="form-control" id="    " placeholder = "Username">
         </div>
@@ -39,7 +39,7 @@
           <input type="password" class="form-control" id="    " placeholder = "Password">
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-greydark btn-block" href="#">Login</button>
+          <button type="submit" class="btn btn-primary btn-greydark btn-block" >Login</button>
         </div>
       </form>
       </div>
@@ -58,22 +58,23 @@
 
     <header>
       <div class="one">
-        <div class="header-one"><span><a class="btn" role="button"data-toggle="modal" data-target="#myModal">Log in </a></span></div>
+        <div class="header-one"><span><a class="btn" role="button" data-toggle="modal" data-target="#myModal">Log in </a></span></div>
       </div>
       <div class="two">
         <div class="header-two">
           <div class="logo"><a href = "index.html"><img src="assets/images/logo.png" class="img-responsive"></a></div>
-          <div class="search">
-
+<!-- search box -->
+<div class="search">
+            <form class="form" id="searchbox">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search for a show" aria-label="Text input with multiple buttons">
               <div class="input-group-btn">
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
               </div>
             </div>
-
-
+            </form>
           </div>
+<!-- search box ends -->         
         </div>
       </div>
     </header>
@@ -90,7 +91,7 @@
         <p>It appears you don't have a PDF plugin for this browser.You can <a href="assets/W-9.pdf">click here todownload the PDF file.</a></p>
       </object>
 
-      <button type= "submit" class="btn btn-primary btn-orange btn-cofare" href="#">Electronic Signature</button>
+      <button type= "submit" class="btn btn-primary btn-orange btn-cofare" >Electronic Signature</button>
 
       <h4 style = "margin-bottom:0;">CoFARE's legal terms</h4>
       <div class="panel panel-cofare">
@@ -105,7 +106,7 @@
       </div>
       <form></form>
       
-      <form id "cofareRetailLegal" class = "form">
+      <form id="cofareRetailLegal" class = "form">
         <div class ="row">
         <div class="checkbox col-md-3 form-group">
           <label>
@@ -114,8 +115,8 @@
         </div>
       </div>
       
-      <button class="btn btn-primary btn-greydark btn-cofare" href="#">Print</button>
-      <button type="submit" class="btn btn-primary btn-orange btn-cofare" href="retailer_profile.html">Submit</button>
+      <a class="btn btn-primary btn-greydark btn-cofare" href="#">Print</a>
+      <button type="submit" class="btn btn-primary btn-orange btn-cofare">Submit</button>
     </form>
 
 

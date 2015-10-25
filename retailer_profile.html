@@ -18,7 +18,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> 
     <![endif]-->
 </head>
-  <!-- Login Modal -->
+<!-- Login Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -28,7 +28,7 @@
       </div>
 
       <div class="modal-body">
-        <form class="form">
+        <form class="form" id="loginBox">
         <div class="form-group">
           <input type="text" class="form-control" id="    " placeholder = "Username">
         </div>
@@ -36,7 +36,7 @@
           <input type="password" class="form-control" id="    " placeholder = "Password">
         </div>
         <div class="form-group">
-          <button type="submit" class="btn btn-primary btn-greydark btn-block" href="#">Login</button>
+          <button type="submit" class="btn btn-primary btn-greydark btn-block" >Login</button>
         </div>
       </form>
       </div>
@@ -65,17 +65,18 @@
         <div class="logo">
           <a href="index.html"><img src="assets/images/logo.png" class="img-responsive"></a>
         </div>
-        <div class="search">
-
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Search for a show" aria-label="Text input with multiple buttons">
-            <div class="input-group-btn">
-              <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+<!-- search box -->
+<div class="search">
+            <form class="form" id="searchbox">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for a show" aria-label="Text input with multiple buttons">
+              <div class="input-group-btn">
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+              </div>
             </div>
+            </form>
           </div>
-
-
-        </div>
+<!-- search box ends -->  
       </div>
     </div>
   </header>
@@ -107,7 +108,7 @@
       <br>
       <p>Other ACH bank Information: <span> </span></p>
       <br>
-      <button type="submit" class="btn btn-primary btn-orange btn-cofare" href="#">Edit</button>
+      <button type="" class="btn btn-primary btn-orange btn-cofare">Edit</button>
       <br><br>
       <h5>Product List</h5>
 <table class = "table">
@@ -135,7 +136,7 @@
       </div>
     </div>
   </div>
-</div>
+
 
   <footer>
     <div class="footer-wrapper">

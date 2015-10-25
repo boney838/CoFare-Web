@@ -8962,6 +8962,10 @@ hr {
   border-top: 1px solid #e5e5e5;
 }
 
+textarea {
+  min-height: 100px;
+}
+
 .page-wrapper {
   min-height: 100%;
   padding-bottom: 2em;

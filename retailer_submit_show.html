@@ -21,7 +21,7 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script> 
     <![endif]-->
 </head>
-  <!-- Login Modal -->
+<!-- Login Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -31,16 +31,17 @@
       </div>
 
       <div class="modal-body">
-        <form class="form">
+        <form class="form" id="loginBox">
         <div class="form-group">
           <input type="text" class="form-control" id="    " placeholder = "Username">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" id="    " placeholder = "Password">
+          <input type="password" class="form-control" id="    " placeholder = "Password">
         </div>
         <div class="form-group">
-          <a class="btn btn-primary btn-greydark btn-block" href="#">Login</a>
+          <button type="submit" class="btn btn-primary btn-greydark btn-block" >Login</button>
         </div>
+      </form>
       </div>
     
       <div class="modal-footer">
@@ -62,17 +63,18 @@
       <div class="two">
         <div class="header-two">
           <div class="logo"><a href = "index.html"><img src="assets/images/logo.png" class="img-responsive"></a></div>
-          <div class="search">
-
+ <!-- search box -->
+<div class="search">
+            <form class="form" id="searchbox">
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search for a show" aria-label="Text input with multiple buttons">
               <div class="input-group-btn">
-                <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
               </div>
             </div>
-
-
+            </form>
           </div>
+<!-- search box ends --> 
         </div>
       </div>
     </header>
@@ -187,15 +189,15 @@
         <hr>
 
         <div class ="row">         
-            <div class="col-md-12 form-group"><label>Fixed CoFare referrral commission fee per itrm sold, or CoFARE referral commission fee per item sol</label></div>
+            <div class="col-md-12 form-group"><label>Fixed CoFare referrral commission fee per item sold, or CoFARE referral commission fee per item sol</label></div>
             <div class="col-md-4 form-group">
               <input type="text" class="form-control" name="commission1" id="" >
             </div>
-            <div class="col-md-1"><span style ="color:#BCBCBC;padding:8px ;">OR</span></div>
+            <div class="col-md-1"><span style =";color:#BCBCBC;padding:8px ;">OR</span></div>
             <div class="col-md-4 form-group">
               <div class="input-group">
               <input type="text" class="form-control" name="commission2" id="" />
-              <span class="input-group-addon" style = "color:#fff;font-weight:bold;">%</span>
+              <span class="input-group-addon" style = "background-color:#f18030;border-color:#f18030;color:#fff;font-weight:bold;">%</span>
             </div>
             </div>        
         </div>
@@ -211,18 +213,13 @@
           </div>
         </div>
       <br>
-      <label>Retailer's terms and conditions</label>
-      <div class="panel panel-cofare">
-        <div class="panel-body">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-
+      
+      <div class ="row">
+          <div class="col-md-12 form-group">
+            <label for="    ">Retailers terms and conditions</label>
+            <textarea class="form-control" name="terms_policy" id="    "></textarea>
+          </div>
         </div>
-      </div>
-
       <div class ="row">
         <div class="checkbox col-md-3 form-group">
           <label>
@@ -232,17 +229,12 @@
       </div>
      
 
-      <label>Retailer's return policy</label>
-      <div class="panel panel-cofare">
-        <div class="panel-body">
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>
-
+      <div class ="row">
+          <div class="col-md-12 form-group">
+            <label for="    ">Retailers return Policy</label>
+            <textarea class="form-control" name="return_policy" id="    "></textarea>
+          </div>
         </div>
-      </div>
 
       <div class ="row">
         <div class="checkbox col-md-3 form-group">
@@ -252,7 +244,7 @@
         </div>
       </div>
 
-      <button type="submit" class="btn btn-primary btn-orange btn-cofare" href="#">Submit</button>
+      <button type="submit" class="btn btn-primary btn-orange btn-cofare">Submit</button>
     </form>
     </div>
     </div>
