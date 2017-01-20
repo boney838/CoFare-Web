@@ -1,0 +1,61 @@
+/*----- TLTC Qualtrics theme -------*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+a {
+	color: #b01700;
+}
+
+.Skin {
+	font-family: 'Raleway', sans-serif;
+	!important
+}
+
+
+/*Buttons*/
+
+.Skin #Buttons #NextButton,
+.Skin #Buttons #PreviousButton {
+	background-color: #b01700;
+	font-family: 'Raleway', sans-serif;
+}
+
+
+/*Multiple Answers*/
+
+.Skin label.MultipleAnswer.q-checked,
+.Skin label.MultipleAnswer.q-checked.q-focused,
+.Skin label.SingleAnswer.q-checked,
+.Skin label.SingleAnswer.q-checked.q-focused {
+	background: #b01700;
+	border-color: #911300;
+}
+
+
+/*Checkbox*/
+
+.Skin label.q-checkbox,
+.Skin label.q-radio {
+	border-color: #911300;
+}
+
+.Skin label.q-radio.q-checked {
+	background-color: #b01700;
+}
+
+
+/*Header background image */
+
+.Skin #Header {
+	height: 55px;
+	background: url('https://umdsurvey.umd.edu/ControlPanel/Graphic.php?IM=IM_ekXQdI2PukMukaV') no-repeat center center;
+	background-size: contain;
+	margin: 10px;
+}
+
+@media all and (min-width: 480px) {
+	.Skin #Header {
+		height: 72px;
+		background: url('https://umdsurvey.umd.edu/ControlPanel/Graphic.php?IM=IM_ekXQdI2PukMukaV') no-repeat center left, url('https://umdsurvey.umd.edu/ControlPanel/Graphic.php?IM=IM_1QYxWPpje1s4s6x') no-repeat center right;
+		margin: 0;
+	}
+}
